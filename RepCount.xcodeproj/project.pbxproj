@@ -13,6 +13,7 @@
 		D81C9D722A12AC0900C98DFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81C9D712A12AC0900C98DFA /* Preview Assets.xcassets */; };
 		D81C9D792A12ACA300C98DFA /* ExerciseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D782A12ACA300C98DFA /* ExerciseItem.swift */; };
 		D81C9D7B2A12ACE700C98DFA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D7A2A12ACE700C98DFA /* Exercise.swift */; };
+		D81C9D7D2A12B09900C98DFA /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D7C2A12B09900C98DFA /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		D81C9D712A12AC0900C98DFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D81C9D782A12ACA300C98DFA /* ExerciseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseItem.swift; sourceTree = "<group>"; };
 		D81C9D7A2A12ACE700C98DFA /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		D81C9D7C2A12B09900C98DFA /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				D81C9D6A2A12AC0800C98DFA /* RepCountApp.swift */,
 				D81C9D6C2A12AC0800C98DFA /* ContentView.swift */,
+				D81C9D7C2A12B09900C98DFA /* AddView.swift */,
 				D81C9D782A12ACA300C98DFA /* ExerciseItem.swift */,
 				D81C9D7A2A12ACE700C98DFA /* Exercise.swift */,
 				D81C9D6E2A12AC0900C98DFA /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			files = (
 				D81C9D792A12ACA300C98DFA /* ExerciseItem.swift in Sources */,
 				D81C9D6D2A12AC0800C98DFA /* ContentView.swift in Sources */,
+				D81C9D7D2A12B09900C98DFA /* AddView.swift in Sources */,
 				D81C9D6B2A12AC0800C98DFA /* RepCountApp.swift in Sources */,
 				D81C9D7B2A12ACE700C98DFA /* Exercise.swift in Sources */,
 			);

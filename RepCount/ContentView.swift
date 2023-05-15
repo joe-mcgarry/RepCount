@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var exercises = Exercises()
+    @State private var showingAddExercise = false
+    
     var body: some View {
         NavigationView {
             List {
@@ -20,11 +22,13 @@ struct ContentView: View {
             .navigationTitle("RepCount")
             .toolbar {
                 Button {
-                    let exercise = ExerciseItem(exerciseName: "Test", category: "Test", amount: 5, weight: 35)
-                    exercises.workouts.append(exercise)
+                    showingAddExercise = true
                 } label: {
                     Image(systemName: "plus")
                 }
+            }
+            .sheet(isPresented: $showingAddExercise) {
+                AddView(exercises: exercises)
             }
         }
     }
