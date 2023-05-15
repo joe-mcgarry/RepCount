@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct ExerciseItem {
+struct ExerciseItem: Identifiable {
+    var id = UUID()
     let exerciseName: String
     let category: String
     let amount: Int
