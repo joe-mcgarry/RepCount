@@ -15,7 +15,19 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(exercises.workouts) { item in
-                    Text(item.exerciseName)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(item.exerciseName)
+                                .font(.headline)
+                            Text(item.category)
+                        }
+                        
+                        Spacer()
+                        Text("Reps")
+                        Text(item.amount, format: .number)
+                        Text("Weight (kg)")
+                        Text(item.weight, format: .number)
+                    }
                 }
                 .onDelete(perform: removeExercise)
             }
