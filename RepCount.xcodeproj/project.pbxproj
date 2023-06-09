@@ -14,6 +14,8 @@
 		D81C9D792A12ACA300C98DFA /* ExerciseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D782A12ACA300C98DFA /* ExerciseItem.swift */; };
 		D81C9D7B2A12ACE700C98DFA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D7A2A12ACE700C98DFA /* Exercise.swift */; };
 		D81C9D7D2A12B09900C98DFA /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D7C2A12B09900C98DFA /* AddView.swift */; };
+		D865F1DE2A3394AD00340809 /* RepCount.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D865F1DC2A3394AD00340809 /* RepCount.xcdatamodeld */; };
+		D865F1E02A33953400340809 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D865F1DF2A33953400340809 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		D81C9D782A12ACA300C98DFA /* ExerciseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseItem.swift; sourceTree = "<group>"; };
 		D81C9D7A2A12ACE700C98DFA /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		D81C9D7C2A12B09900C98DFA /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		D865F1DD2A3394AD00340809 /* RepCount.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepCount.xcdatamodel; sourceTree = "<group>"; };
+		D865F1DF2A33953400340809 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 			children = (
 				D81C9D6A2A12AC0800C98DFA /* RepCountApp.swift */,
 				D81C9D6C2A12AC0800C98DFA /* ContentView.swift */,
+				D865F1DC2A3394AD00340809 /* RepCount.xcdatamodeld */,
+				D865F1DF2A33953400340809 /* DataController.swift */,
 				D81C9D7C2A12B09900C98DFA /* AddView.swift */,
 				D81C9D782A12ACA300C98DFA /* ExerciseItem.swift */,
 				D81C9D7A2A12ACE700C98DFA /* Exercise.swift */,
@@ -146,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D865F1E02A33953400340809 /* DataController.swift in Sources */,
 				D81C9D792A12ACA300C98DFA /* ExerciseItem.swift in Sources */,
 				D81C9D6D2A12AC0800C98DFA /* ContentView.swift in Sources */,
 				D81C9D7D2A12B09900C98DFA /* AddView.swift in Sources */,
+				D865F1DE2A3394AD00340809 /* RepCount.xcdatamodeld in Sources */,
 				D81C9D6B2A12AC0800C98DFA /* RepCountApp.swift in Sources */,
 				D81C9D7B2A12ACE700C98DFA /* Exercise.swift in Sources */,
 			);
@@ -351,6 +359,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D865F1DC2A3394AD00340809 /* RepCount.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D865F1DD2A3394AD00340809 /* RepCount.xcdatamodel */,
+			);
+			currentVersion = D865F1DD2A3394AD00340809 /* RepCount.xcdatamodel */;
+			path = RepCount.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D81C9D5F2A12AC0800C98DFA /* Project object */;
 }
