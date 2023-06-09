@@ -8,25 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var exercises = Exercises()
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var exercises: FetchedResults<Exercise>
+
     @State private var showingAddExercise = false
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(exercises.workouts) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.exerciseName)
-                                .font(.headline)
-                            Text(item.category)
+                ForEach(exercises) { exercise in
+                    NavigationLink {
+                        Text("Hello")
+                    } label: {
+                        HStack {
+                            
                         }
-                        
-                        Spacer()
-                        Text("Reps")
-                        Text(item.amount, format: .number)
-                        Text("Weight (kg)")
-                        Text(item.weight, format: .number)
                     }
                 }
                 .onDelete(perform: removeExercise)
@@ -40,13 +36,13 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $showingAddExercise) {
-                AddView(exercises: exercises)
+                AddView()
             }
         }
     }
     
     func removeExercise(at offsets: IndexSet) {
-        exercises.workouts.remove(atOffsets: offsets)
+        //Delete a workout
     }
 }
 

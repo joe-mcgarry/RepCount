@@ -11,9 +11,7 @@
 		D81C9D6D2A12AC0800C98DFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D6C2A12AC0800C98DFA /* ContentView.swift */; };
 		D81C9D6F2A12AC0900C98DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81C9D6E2A12AC0900C98DFA /* Assets.xcassets */; };
 		D81C9D722A12AC0900C98DFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81C9D712A12AC0900C98DFA /* Preview Assets.xcassets */; };
-		D81C9D792A12ACA300C98DFA /* ExerciseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D782A12ACA300C98DFA /* ExerciseItem.swift */; };
-		D81C9D7B2A12ACE700C98DFA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D7A2A12ACE700C98DFA /* Exercise.swift */; };
-		D81C9D7D2A12B09900C98DFA /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D7C2A12B09900C98DFA /* AddView.swift */; };
+		D81C9D7D2A12B09900C98DFA /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C9D7C2A12B09900C98DFA /* AddExerciseView.swift */; };
 		D865F1DE2A3394AD00340809 /* RepCount.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D865F1DC2A3394AD00340809 /* RepCount.xcdatamodeld */; };
 		D865F1E02A33953400340809 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D865F1DF2A33953400340809 /* DataController.swift */; };
 /* End PBXBuildFile section */
@@ -24,9 +22,7 @@
 		D81C9D6C2A12AC0800C98DFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D81C9D6E2A12AC0900C98DFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D81C9D712A12AC0900C98DFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D81C9D782A12ACA300C98DFA /* ExerciseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseItem.swift; sourceTree = "<group>"; };
-		D81C9D7A2A12ACE700C98DFA /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
-		D81C9D7C2A12B09900C98DFA /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		D81C9D7C2A12B09900C98DFA /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
 		D865F1DD2A3394AD00340809 /* RepCount.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepCount.xcdatamodel; sourceTree = "<group>"; };
 		D865F1DF2A33953400340809 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,9 +61,7 @@
 				D81C9D6C2A12AC0800C98DFA /* ContentView.swift */,
 				D865F1DC2A3394AD00340809 /* RepCount.xcdatamodeld */,
 				D865F1DF2A33953400340809 /* DataController.swift */,
-				D81C9D7C2A12B09900C98DFA /* AddView.swift */,
-				D81C9D782A12ACA300C98DFA /* ExerciseItem.swift */,
-				D81C9D7A2A12ACE700C98DFA /* Exercise.swift */,
+				D81C9D7C2A12B09900C98DFA /* AddExerciseView.swift */,
 				D81C9D6E2A12AC0900C98DFA /* Assets.xcassets */,
 				D81C9D702A12AC0900C98DFA /* Preview Content */,
 			);
@@ -153,12 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D865F1E02A33953400340809 /* DataController.swift in Sources */,
-				D81C9D792A12ACA300C98DFA /* ExerciseItem.swift in Sources */,
 				D81C9D6D2A12AC0800C98DFA /* ContentView.swift in Sources */,
-				D81C9D7D2A12B09900C98DFA /* AddView.swift in Sources */,
+				D81C9D7D2A12B09900C98DFA /* AddExerciseView.swift in Sources */,
 				D865F1DE2A3394AD00340809 /* RepCount.xcdatamodeld in Sources */,
 				D81C9D6B2A12AC0800C98DFA /* RepCountApp.swift in Sources */,
-				D81C9D7B2A12ACE700C98DFA /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

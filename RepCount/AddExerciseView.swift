@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct AddView: View {
-    @ObservedObject var exercises: Exercises
+    @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
     
-    @State private var exerciseName = ""
+    @State private var name = ""
     @State private var category = ""
     @State private var amount = 0
     @State private var weight = 0.0
+    @State private var moodAfter = 3
+    @State private var notes = ""
     
-    let categories = ["Chest", "Arms", "Back", "Legs", "Abs"]
+    let categories = ["Chest", "Arms", "Back", "Legs", "Abs", "Cardio"]
     
     var body: some View {
         NavigationView {
             Form {
-                TextField("Exercise", text: $exerciseName)
+                Section {
+                    TextField("Exercise", text: $name)
+                }
                 
                 Picker("Category", selection: $category) {
                     ForEach(categories, id: \.self) {
@@ -42,21 +46,32 @@ struct AddView: View {
                     TextField("Weight", value: $weight, format: .number)
                         .keyboardType(.decimalPad)
                 }
-            }
-            .navigationTitle("Add exercise")
-            .toolbar {
-                Button("Save") {
-                    let item = ExerciseItem(exerciseName: exerciseName, category: category, amount: amount, weight: weight)
-                    exercises.workouts.append(item)
-                    dismiss()
+                
+                Section {
+                    TextEditor(text: $notes)
+                    
+                    Picker("How was the session?", selection: $moodAfter) {
+                        ForEach(0..<6) {
+                            Text(String($0))
+                        }
+                    }
+                } header: {
+                    Text("Leave a note about the exercise")
+                }
+                
+                Section {
+                    Button("Save") {
+                        //Add the exercise
+                    }
                 }
             }
+            .navigationTitle("Add exercise")
         }
     }
 }
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView(exercises: Exercises())
+        AddView()
     }
 }
