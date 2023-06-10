@@ -21,7 +21,12 @@ struct ContentView: View {
                         Text("Hello")
                     } label: {
                         HStack {
-                            
+                            VStack(alignment: .leading) {
+                                Text(exercise.name ?? "Unknown Exercise")
+                                    .font(.headline)
+                                Text(exercise.category ?? "Unknown Category")
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
                 }
@@ -29,14 +34,16 @@ struct ContentView: View {
             }
             .navigationTitle("RepCount")
             .toolbar {
-                Button {
-                    showingAddExercise = true
-                } label: {
-                    Image(systemName: "plus")
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingAddExercise = true
+                    } label: {
+                        Label("Add Exercise", systemImage: "plus")
+                    }
                 }
             }
             .sheet(isPresented: $showingAddExercise) {
-                AddView()
+                AddExerciseView()
             }
         }
     }

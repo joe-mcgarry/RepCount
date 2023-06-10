@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddView: View {
+struct AddExerciseView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
     
@@ -61,7 +61,17 @@ struct AddView: View {
                 
                 Section {
                     Button("Save") {
-                        //Add the exercise
+                        let newExercise = Exercise(context: moc)
+                        newExercise.id = UUID()
+                        newExercise.name = name
+                        newExercise.category = category
+                        newExercise.reps = Int16(amount)
+                        newExercise.weight = weight
+                        newExercise.notes = notes
+                        newExercise.mood = Int16(moodAfter)
+                        
+                        try? moc.save()
+                        dismiss()
                     }
                 }
             }
@@ -72,6 +82,6 @@ struct AddView: View {
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView()
+        AddExerciseView()
     }
 }
