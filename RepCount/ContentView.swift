@@ -18,9 +18,12 @@ struct ContentView: View {
             List {
                 ForEach(exercises) { exercise in
                     NavigationLink {
-                        Text("Hello")
+                        Text(exercise.name ?? "Unknown exercise")
                     } label: {
                         HStack {
+                            EmojiRatingView(rating: exercise.mood)
+                                .font(.largeTitle)
+                            
                             VStack(alignment: .leading) {
                                 Text(exercise.name ?? "Unknown Exercise")
                                     .font(.headline)
