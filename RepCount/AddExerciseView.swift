@@ -49,12 +49,7 @@ struct AddExerciseView: View {
                 
                 Section {
                     TextEditor(text: $notes)
-                    
-                    Picker("How was the session?", selection: $moodAfter) {
-                        ForEach(0..<6) {
-                            Text(String($0))
-                        }
-                    }
+                    RatingView(rating: $moodAfter)
                 } header: {
                     Text("Leave a note about the exercise")
                 }
