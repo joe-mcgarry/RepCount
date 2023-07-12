@@ -8,51 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var exercises: FetchedResults<Exercise>
 
-    @State private var showingAddExercise = false
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(exercises) { exercise in
-                    NavigationLink {
-                        Text(exercise.name ?? "Unknown exercise")
-                    } label: {
-                        HStack {
-                            EmojiRatingView(rating: exercise.mood)
-                                .font(.largeTitle)
-                            
-                            VStack(alignment: .leading) {
-                                Text(exercise.name ?? "Unknown Exercise")
-                                    .font(.headline)
-                                Text(exercise.category ?? "Unknown Category")
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                    }
+        TabView {
+            ExerciseView()
+                .tabItem {
+                    Label("Exercises", systemImage: "dumbbell")
                 }
-                .onDelete(perform: removeExercise)
-            }
-            .navigationTitle("RepCount")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showingAddExercise = true
-                    } label: {
-                        Label("Add Exercise", systemImage: "plus")
-                    }
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
                 }
-            }
-            .sheet(isPresented: $showingAddExercise) {
-                AddExerciseView()
-            }
         }
-    }
-    
-    func removeExercise(at offsets: IndexSet) {
-        //Delete a workout
     }
 }
 
